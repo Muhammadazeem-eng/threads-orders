@@ -21,8 +21,8 @@ const Navbar = ({ isDark, toggleTheme }: NavbarProps) => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link to="/" className="font-display text-2xl font-bold tracking-tight text-foreground">
-          Socks <span className="text-gradient-gold">&</span> Threads
+        <Link to="/">
+          <img src="/logo.jpeg" alt="Socks & Threads" className="h-12 w-auto object-contain" />
         </Link>
 
         {/* Desktop nav */}

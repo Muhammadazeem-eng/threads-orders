@@ -2,17 +2,10 @@ import { Link } from "react-router-dom";
 import { Truck, Banknote, RotateCcw, Headphones } from "lucide-react";
 import { defaultProducts } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import heroBanner from "@/assets/hero-banner.jpg";
-import categorySocks from "@/assets/category-socks.jpg";
-import categoryBlazers from "@/assets/category-blazers.jpg";
-import categoryTshirts from "@/assets/category-tshirts.jpg";
-import categoryTrousers from "@/assets/category-trousers.jpg";
 
 const categoryCards = [
-  { name: "Socks", image: categorySocks },
-  { name: "Blazers", image: categoryBlazers },
-  { name: "T-Shirts", image: categoryTshirts },
-  { name: "Trousers", image: categoryTrousers },
+  { name: "Socks", image: "/socks/collection.png" },
+  { name: "Vests", image: "/socks/vest-tshirt.png" },
 ];
 
 const trustBadges = [
@@ -22,22 +15,22 @@ const trustBadges = [
   { icon: Headphones, label: "24/7 Support", sub: "Always here for you" },
 ];
 
-const featuredProducts = defaultProducts.filter(p => p.salePrice || ["1","5","8","11"].includes(p.id)).slice(0, 8);
+const featuredProducts = defaultProducts.slice(0, 8);
 
 const Index = () => {
   return (
     <div>
       {/* Hero */}
       <section className="relative flex min-h-[70vh] items-center overflow-hidden">
-        <img src={heroBanner} alt="Premium menswear collection" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
+        <img src="/socks/cover.png" alt="Socks and Threads — Comfort Beneath Every Layer" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
         <div className="container relative z-10 mx-auto px-4 py-20">
           <div className="max-w-lg">
             <h1 className="mb-4 font-display text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
-              Elevate Your <span className="text-gradient-gold">Style</span>
+              Comfort Beneath <span className="text-gradient-gold">Every Layer</span>
             </h1>
             <p className="mb-8 text-lg text-primary-foreground/80">
-              Premium socks, blazers, t-shirts & trousers. Quality menswear delivered to your doorstep.
+              Premium socks & undershirts. Quality essentials delivered to your doorstep.
             </p>
             <Link
               to="/products"
@@ -53,7 +46,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16">
         <h2 className="mb-2 text-center font-display text-3xl font-bold text-foreground">Shop by Category</h2>
         <p className="mb-10 text-center text-muted-foreground">Find exactly what you're looking for</p>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+        <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-2xl mx-auto">
           {categoryCards.map((cat) => (
             <Link
               key={cat.name}

@@ -1,4 +1,4 @@
-export type Category = "Socks" | "Blazers" | "T-Shirts" | "Trousers";
+export type Category = "Socks" | "Vests";
 
 export interface Product {
   id: string;
@@ -11,117 +11,135 @@ export interface Product {
 }
 
 export const defaultProducts: Product[] = [
+  // ── Socks — each sold as a Set of 4 (Black, Blue, Grey, Brown) ────────────
   {
     id: "1",
-    name: "Classic Black Crew Socks",
-    price: 499,
+    name: "Classic Crew Socks",
+    price: 1999,
     category: "Socks",
-    image: "https://placehold.co/400x500/1a1a2e/eee?text=Black+Crew+Socks",
-    description: "Premium cotton crew socks with reinforced heel and toe for lasting comfort."
+    image: "/socks/black-crew-socks.png",
+    description: "Premium cotton crew socks with reinforced heel and toe. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "2",
-    name: "Striped Ankle Socks Pack of 3",
-    price: 899,
-    salePrice: 699,
+    name: "Striped Ankle Socks",
+    price: 1999,
     category: "Socks",
-    image: "https://placehold.co/400x500/2d3a4a/eee?text=Striped+Ankle+Socks",
-    description: "Trendy striped ankle socks in a pack of 3. Perfect for everyday wear."
+    image: "/socks/gray-striped-socks.png",
+    description: "Stylish striped ankle socks in a perfect casual fit. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "3",
-    name: "Premium Cotton Sports Socks",
-    price: 599,
+    name: "Sports Socks",
+    price: 1999,
     category: "Socks",
-    image: "https://placehold.co/400x500/3a4a3d/eee?text=Sports+Socks",
-    description: "Breathable sports socks with moisture-wicking technology."
+    image: "/socks/sport-socks.png",
+    description: "Breathable cushioned socks for active wear. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "4",
-    name: "Dotted Dress Socks Pack of 5",
-    price: 1499,
-    salePrice: 999,
+    name: "Striped Dress Socks",
+    price: 1999,
     category: "Socks",
-    image: "https://placehold.co/400x500/4a3a2d/eee?text=Dress+Socks+x5",
-    description: "Elegant dotted dress socks bundle. Ideal for formal and semi-formal occasions."
+    image: "/socks/dress-socks.png",
+    description: "Elegant striped dress socks for formal occasions. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "5",
-    name: "Navy Blue Slim Fit Blazer",
-    price: 5999,
-    category: "Blazers",
-    image: "https://placehold.co/400x500/1a2744/eee?text=Navy+Blazer",
-    description: "Tailored slim fit blazer in classic navy. Perfect for business and events."
+    name: "Fine Striped Socks",
+    price: 1999,
+    category: "Socks",
+    image: "/socks/navy-striped-socks.png",
+    description: "Classic fine-stripe socks, versatile for any outfit. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "6",
-    name: "Black Classic Blazer",
-    price: 6499,
-    salePrice: 4999,
-    category: "Blazers",
-    image: "https://placehold.co/400x500/111111/eee?text=Black+Blazer",
-    description: "Timeless black blazer with premium fabric and modern cut."
+    name: "Solid Crew Socks",
+    price: 1999,
+    category: "Socks",
+    image: "/socks/navy-crew-socks.png",
+    description: "Clean solid crew socks, the everyday reliable choice. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "7",
-    name: "Grey Casual Blazer",
-    price: 5499,
-    category: "Blazers",
-    image: "https://placehold.co/400x500/4a4a4a/eee?text=Grey+Blazer",
-    description: "Versatile grey blazer for casual and semi-formal settings."
+    name: "Premium Crew Socks",
+    price: 1999,
+    category: "Socks",
+    image: "/socks/brown-socks.png",
+    description: "Luxuriously soft premium cotton crew socks. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
   },
   {
     id: "8",
-    name: "White Essential Crew Neck",
-    price: 999,
-    category: "T-Shirts",
-    image: "https://placehold.co/400x500/f5f5f0/333?text=White+Tee",
-    description: "Soft 100% cotton crew neck tee. A wardrobe essential."
+    name: "Everyday Comfort Socks",
+    price: 1999,
+    category: "Socks",
+    image: "/socks/gray-socks.png",
+    description: "Soft everyday socks with subtle detailing. Comes as a set of 4 pairs in Black, Blue, Grey & Brown."
+  },
+  // ── Vests / Undershirts ────────────────────────────────────────────────────
+  {
+    id: "10",
+    name: "White Sleeveless Undershirt",
+    price: 1199,
+    category: "Vests",
+    image: "/socks/vest-sleeveless.png",
+    description: "Classic white sleeveless cotton undershirt. Pack of 3. Lightweight, durable and comfortable all day."
   },
   {
     id: "9",
-    name: "Black Oversized T-Shirt",
-    price: 1299,
-    category: "T-Shirts",
-    image: "https://placehold.co/400x500/1a1a1a/eee?text=Black+Oversized",
-    description: "Relaxed fit oversized tee in premium heavyweight cotton."
-  },
-  {
-    id: "10",
-    name: "Olive Green Polo",
+    name: "White Half-Sleeve Undershirt",
     price: 1499,
-    salePrice: 1199,
-    category: "T-Shirts",
-    image: "https://placehold.co/400x500/4a5a3a/eee?text=Olive+Polo",
-    description: "Classic polo shirt in olive green with ribbed collar."
+    category: "Vests",
+    image: "/socks/vest-tshirt.png",
+    description: "Soft 100% cotton white half-sleeve undershirt. Pack of 3. Smooth, breathable and perfectly fitted."
   },
   {
     id: "11",
-    name: "Beige Chino Trousers",
-    price: 2499,
-    category: "Trousers",
-    image: "https://placehold.co/400x500/c4b08a/333?text=Beige+Chinos",
-    description: "Comfortable slim fit chinos in versatile beige color."
+    name: "Black Sleeveless Undershirt",
+    price: 1399,
+    category: "Vests",
+    image: "/socks/black-sleeveless.png",
+    description: "Classic black sleeveless cotton undershirt. Pack of 3. Lightweight, durable and comfortable all day."
   },
   {
     id: "12",
-    name: "Black Formal Trousers",
-    price: 2999,
-    salePrice: 2499,
-    category: "Trousers",
-    image: "https://placehold.co/400x500/1a1a1a/eee?text=Black+Trousers",
-    description: "Crisp formal trousers with a tailored fit for a polished look."
-  }
+    name: "Black Half-Sleeve Undershirt",
+    price: 1799,
+    category: "Vests",
+    image: "/socks/black-halfsleeve.png",
+    description: "Soft 100% cotton black half-sleeve undershirt. Pack of 3. Smooth, breathable and perfectly fitted."
+  },
 ];
 
-export const WHATSAPP_NUMBER = "923001234567";
+export const WHATSAPP_NUMBER = "923098147346";
 
-export const getWhatsAppLink = (product: Product) => {
+export const getWhatsAppLink = (product: Product, colorNote?: string) => {
   const price = product.salePrice || product.price;
+  const colorPart = colorNote ? ` | Colors: ${colorNote}` : "";
   const message = encodeURIComponent(
-    `Hi, I want to order: ${product.name} | Price: Rs. ${price}. Please confirm availability.`
+    `Hi, I want to order: ${product.name}${colorPart} | Price: Rs. ${price}. Please confirm availability.`
   );
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 };
 
-export const categories: Category[] = ["Socks", "Blazers", "T-Shirts", "Trousers"];
+export const categories: Category[] = ["Socks", "Vests"];
+
+export const SOCK_COLORS = [
+  { name: "Black", hex: "#1a1a1a" },
+  { name: "Blue",  hex: "#1e3a5f" },
+  { name: "Grey",  hex: "#8a8a8a" },
+  { name: "Brown", hex: "#6b3a2a" },
+];
+
+export const VEST_COLORS = [
+  { name: "Black", hex: "#1a1a1a" },
+  { name: "White", hex: "#f0f0f0" },
+];
+
+export const VEST_SIZES = [
+  { label: "S",   extra: 0 },
+  { label: "M",   extra: 0 },
+  { label: "L",   extra: 0 },
+  { label: "XL",  extra: 100 },
+  { label: "XXL", extra: 200 },
+];

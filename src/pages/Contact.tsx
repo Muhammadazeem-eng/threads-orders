@@ -7,7 +7,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll get back to you soon.");
+    const text = `Hello, I contacted you via the website.\n\nName: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`;
+    window.open(`https://wa.me/923098147346?text=${encodeURIComponent(text)}`, "_blank");
     setForm({ name: "", email: "", message: "" });
   };
 
@@ -30,7 +31,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-display font-semibold text-card-foreground">WhatsApp</h3>
-              <p className="text-sm text-muted-foreground">+92 300 1234567</p>
+              <p className="text-sm text-muted-foreground">+92 309 8147346</p>
             </div>
           </a>
 
@@ -40,7 +41,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-display font-semibold text-card-foreground">Phone</h3>
-              <p className="text-sm text-muted-foreground">+92 300 1234567</p>
+              <p className="text-sm text-muted-foreground">+92 309 8147346</p>
             </div>
           </div>
 
@@ -50,7 +51,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-display font-semibold text-card-foreground">Email</h3>
-              <p className="text-sm text-muted-foreground">hello@socksandthreads.com</p>
+              <p className="text-sm text-muted-foreground">socksandthreads@gmail.com</p>
             </div>
           </div>
 
@@ -60,7 +61,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-display font-semibold text-card-foreground">Address</h3>
-              <p className="text-sm text-muted-foreground">Gulberg III, Lahore, Pakistan</p>
+              <p className="text-sm text-muted-foreground">Kohinoor City, Faisalabad, Pakistan</p>
             </div>
           </div>
 
